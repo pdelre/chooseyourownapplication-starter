@@ -4,4 +4,7 @@ $(function(){
 		el: $('#loginView'),
 		model: App.currentUser
 	});
+	var newQuestionView = new App.Views.NewQuestion({
+		el: $('#newQuestionView')
+	});
 });
