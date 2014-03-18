@@ -9,7 +9,7 @@ App.Views.NewQuestion = Backbone.View.extend({
 		'click #addItem': 'addItem'
 	},
 
-	addItem: {
+	addItem: function(){
 		var question = {
 			text: this.$('#newQuestion').val(),
 			username: App.currentUser.get('username')

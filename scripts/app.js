@@ -9,4 +9,8 @@ $(function(){
 		el: $('#newQuestionView'),
 		model: questions
 	});
+	var questionsView = new App.Views.Questions({
+		el: $('#questions'),
+		model: questions
+	});
 });
