@@ -13,4 +13,6 @@ $(function(){
 		el: $('#questions'),
 		model: questions
 	});
+	
+	questions.fetch();
 });
