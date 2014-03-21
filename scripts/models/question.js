@@ -4,6 +4,14 @@ App.Models.Question = Backbone.Model.extend({
 		votes: []
 	},
 	
+	didUserVote: function(username, voteValue){
+		var vote = this.getExistingVote(username);
+		return !!(vote && vote.value == voteValue);
+	},
+	
+	didUserVoteUp: function(username) { return this.didUserVote(username, 1); },
+	didUserVoteDown: function(username) { return this.didUserVote(username, -1); },
+	
 	constrain: function(value, min, max){
 		if(value < min) return min;
 		if(value > max) return max;
